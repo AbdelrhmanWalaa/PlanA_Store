@@ -16,11 +16,12 @@ namespace PlanA_Store.Models
 
         [Required(ErrorMessage = "You must enter the Product Name")]
         [Display(Name = "Product Name")]
+        [StringLength(50,ErrorMessage ="Product Name is too large")]
         public string ProductName { get; set; }
 
         [Required(ErrorMessage = "You must enter the Unit Price")]
         [Display(Name = "Unit Price")]
-        [Column(TypeName ="decimal(10,2)")]
+        [Column(TypeName ="decimal(5,2)")]
         public decimal UnitPrice { get; set; }
 
         public int AdminID { get; set; }

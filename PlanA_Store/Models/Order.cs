@@ -16,9 +16,10 @@ namespace PlanA_Store.Models
         [Required(ErrorMessage = "You must enter the Order Number")]
         [Display(Name = "Order Number")]
         public int OrderNumber { get; set; }
+
         [Display(Name ="Order Date")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString ="{dd:yyyy:mm}",ApplyFormatInEditMode =true)]
+        [DisplayFormat(DataFormatString = "{dd:yyyy:mm}" , ApplyFormatInEditMode = true)]
         public DateTime OrderDate { get; set; }
 
         public int CustomerID { get; set; }

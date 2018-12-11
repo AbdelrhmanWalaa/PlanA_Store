@@ -10,7 +10,7 @@ using PlanA_Store.DataContext;
 namespace PlanA_Store.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20181208213607_FirstMigration")]
+    [Migration("20181211165920_FirstMigration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -110,10 +110,11 @@ namespace PlanA_Store.Migrations
                     b.Property<int>("AdminID");
 
                     b.Property<string>("ProductName")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.Property<decimal>("UnitPrice")
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("decimal(5,2)");
 
                     b.HasKey("ProductID");
 

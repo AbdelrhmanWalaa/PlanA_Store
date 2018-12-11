@@ -8,6 +8,8 @@ namespace PlanA_Store.DataContext
 {
     public class MyContext : DbContext
     {
+        //Configuration Constructor
+
         public MyContext(DbContextOptions<MyContext> options)
          : base(options)
         {

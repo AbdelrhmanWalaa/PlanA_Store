@@ -46,8 +46,8 @@ namespace PlanA_Store.Migrations
                 {
                     ProductID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ProductName = table.Column<string>(nullable: false),
-                    UnitPrice = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
+                    ProductName = table.Column<string>(maxLength: 50, nullable: false),
+                    UnitPrice = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
                     AdminID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

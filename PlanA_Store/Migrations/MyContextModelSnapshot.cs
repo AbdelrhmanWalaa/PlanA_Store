@@ -108,10 +108,11 @@ namespace PlanA_Store.Migrations
                     b.Property<int>("AdminID");
 
                     b.Property<string>("ProductName")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.Property<decimal>("UnitPrice")
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("decimal(5,2)");
 
                     b.HasKey("ProductID");
 
